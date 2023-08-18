@@ -50,33 +50,3 @@ h1 {
     gap: 1rem;
     padding: 0;
 }
-.case-studies {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem 2rem;
-}
-
-.casestudy {
-    display: flex;
-    gap: 2rem;
-}
-
-.casestudy h3 {
-    margin: 0;
-    font-size: 1.62671rem;
-    color: var(--color-text);
-}
-
-.casestudy img {
-    border-radius: 8px;
-    height: 280px;
-}
-
-.casestudy p {
-    color: var(--color-text-2);
-}
-
-.casestudy a {
-    color: var(--color-primary);
-    text-decoration: none;
-}
