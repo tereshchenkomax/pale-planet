@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import "../styles/global.css";
 import { Debug } from "astro/components";
+import Faq from "../components/FAQ.jsx";
 
 const response = await fetch(
   "https://bejamas.io/api/blog?category=case-studies"
@@ -16,7 +17,7 @@ const blogs = await Astro.glob("../pages/blog/*.md");
   console.log("test");
 </script>
 <Layout title="Welcome to Astro.">
-  <Debug {blogs} />
+  <!-- <Debug {blogs} /> -->
   <div>
     <main>
       <h1>Welcome to <span class="text-gradient">Astro</span></h1>
@@ -111,6 +112,9 @@ const blogs = await Astro.glob("../pages/blog/*.md");
           }
         </ul>
       </div>
+    </section>
+    <section>
+      <Faq client:load />
     </section>
   </div>
 </Layout>
