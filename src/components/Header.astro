@@ -1,4 +1,5 @@
 ---
+const isDev = import.meta.env.DEV;
 ---
 
 <header>
@@ -7,9 +8,9 @@
     <!--    <svg>&lt;!&ndash; SVG Logo goes here &ndash;&gt;</svg></a>-->
     <nav class="p-0.5">
       <div class="outline outline-offset-2 outline-blue-500 rounded-xl">
-        <a class="" href="/">Home</a>
+        <a class="" href={isDev ? "/" : "/pale-planet"}>Home</a>
       </div>
-      <div><a href="/pale-planet/about">About</a></div>
+      <div><a href={isDev ? "/about" : "/pale-planet/about"}>About</a></div>
     </nav>
   </div>
 </header>
