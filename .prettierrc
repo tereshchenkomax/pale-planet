@@ -4,17 +4,19 @@
   "proseWrap": "always",
   "overrides": [
     {
-      "files": "**/*.+(scss|css)",
+      "files": "**/*.+(scss|css|jsx)",
       "options": {
         "singleQuote": false,
         "tabWidth": 4
       }
     },
     {
-      "files": "**/__mocks__/**/*.astro",
+      "files": "**/*.astro",
       "options": {
+        "parser": "astro",
         "proseWrap": "preserve"
       }
     }
   ]
 }
+
