@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 
 <Layout title="Welcome to Astro.">
   <!-- <Debug {posts} /> -->
-  <div>
+  <div class="container mx-auto">
     <main>
       <h1>Welcome to <span class="text-gradient">Astro</span></h1>
       <p class="instructions">
@@ -75,11 +75,11 @@ export async function getStaticPaths() {
         <h2 class="section-title">Case studies</h2>
         <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-12 gap-4">
           {
-            [...posts, ...posts].map((post, index) => (
+            [...posts].map((post, index) => (
               <li class="relative w-full h-28 sm:w-20 sm:h-20 md:w-24 md:h-24 transform transition-transform duration-500 hover:scale-110">
                 <a href={`/games/${post.slug}`} class="text-pink-600">
                   <img class="absolute top-0 left-0 w-full h-full rounded-xl" src={post.mainImage.asset.url} alt="" />
-                  <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 duration-500 hover:opacity-100 transition-opacity">
+                  <div class="absolute top-0 left-0 w-full h-full p-1 flex items-center justify-center opacity-0 duration-500 hover:opacity-100 transition-opacity">
                     <h6 class="m-0 text-sm text-white">{post.title}</h6>
                   </div>
                 </a>
