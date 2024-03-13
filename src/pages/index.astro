@@ -7,6 +7,8 @@ import Faq from '../components/FAQ.jsx';
 import getPosts from '../utils/getPosts';
 import getGames from '../utils/getGames';
 
+const isDev = import.meta.env.DEV;
+
 const blogs = await Astro.glob('../pages/blog/*.md');
 const posts = await getPosts();
 const games = await getGames();
@@ -78,7 +80,7 @@ export async function getStaticPaths() {
           {
             games?.map((game) => (
               <li class="relative w-full h-28 sm:w-20 sm:h-20 md:w-24 md:h-24 transform transition-transform duration-500 hover:scale-110">
-                <a href={`/games/${game.slug}`} class="text-pink-600">
+                <a href={`${isDev ? '' : '/pale-planet'}/games/${game.slug}`} class="text-pink-600">
                   <img
                     class="absolute top-0 left-0 w-full h-full rounded-xl"
                     src={game.featuredImage?.node.sourceUrl ?? ''}

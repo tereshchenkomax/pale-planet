@@ -12,4 +12,14 @@ export async function getStaticPaths() {
 
 <Layout title="Games">
   <h1>{game}</h1>
+  <iframe
+    id="game-element"
+    allowfullscreen="true"
+    allow="autoplay; fullscreen; camera; focus-without-user-activation *; monetization; gamepad; keyboard-map *; xr-spatial-tracking; clipboard-write; web-share; accelerometer; magnetometer; gyroscope"
+    name="gameFrame"
+    scrolling="no"
+    sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-same-origin allow-downloads"
+    src="//games.poki.com/458768/penaltyshooters2?tag=pg-v5.12.0+e04f1d9a11e30858ca731f86ae403473562d2437&site_id=52&iso_lang=es&country=PL&poki_url=https://poki.com/es/g/penalty-shooters-2&gdhoist=yes&nonPersonalized=n&familyFriendly=n&categories=2,27,37,96,735,775,802,929,1103,1123,1126,1140,1190"
+    title="Game"
+    class="Clsn52HE2ZzhoBMbiAF6"></iframe>
 </Layout>
