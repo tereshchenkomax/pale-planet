@@ -1,15 +1,12 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-// const posts = data?.posts;
-
-import getPosts from '../../utils/getPosts';
+import getGames from '../../utils/getGames';
 
 const { game } = Astro.params;
 export async function getStaticPaths() {
-  const posts = await getPosts();
-  // return [{ params: { game: 'clifford' } }, { params: { game: 'rover' } }, { params: { game: 'spot' } }];
-  return posts.map((post) => ({ params: { game: post.slug } })) ?? [];
+  const games = await getGames();
+  return games?.map((game) => ({ params: { game: game.slug } })) ?? [];
 }
 ---
 
