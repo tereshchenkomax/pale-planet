@@ -1,4 +1,3 @@
-// import React, { useEffect, useState } from "react";
 import Faq from "react-faq-component";
 import "./FAQ.css";
 

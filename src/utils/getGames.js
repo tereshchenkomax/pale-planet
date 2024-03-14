@@ -17,9 +17,6 @@ export default async function getGames() {
                   sourceUrl
                 }
               }
-              seo {
-                metaDesc
-              }
             }
           }
         }
